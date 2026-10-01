@@ -1,0 +1,168 @@
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.mike-container {
+  position: relative;
+  width: 400px;
+  height: 450px;
+}
+
+/* --- CUERPO  --- */
+.cuerpo {
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  background: #2af717;
+  border: 4px solid #000000;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* --- CUERNOS --- */
+.cuerno {
+  position: absolute;
+  top: 75px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 30px solid #e2c93b;
+  z-index: 1;
+}
+
+.cuerno.izq {
+  left: 135px;
+  transform: rotate(-25deg);
+}
+
+.cuerno.der {
+  right: 135px;
+  transform: rotate(25deg);
+}
+
+/* --- OJO --- */
+.ojo-exterior {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 90px;
+  height: 90px;
+  border: 4px solid #000000;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.iris {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #000000;
+  border-radius: 50%;
+}
+
+.pupila {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+/* Brillo dentro del ojo */
+.pupila::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* --- SONRISA --- */
+.boca {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  width: 120px;
+  height: 50px;
+  border-bottom: 4px solid #000000;
+  border-radius: 0 0 60px 60px;
+}
+
+/* --- BRAZOS --- */
+.brazo {
+  position: absolute;
+  top: 180px;
+  width: 70px;
+  height: 60px;
+  border: 4px solid #000000;
+  border-bottom: none;
+  z-index: 1;
+}
+
+.brazo.izq {
+  left: 45px;
+  border-right: none;
+  transform: skewY(25deg);
+}
+
+.brazo.der {
+  right: 45px;
+  border-left: none;
+  transform: skewY(-25deg);
+}
+
+/* --- PIERNAS Y PIES --- */
+.pierna {
+  position: absolute;
+  top: 280px;
+  width: 4px;
+  height: 90px;
+  background: #000000;
+  z-index: 1;
+}
+
+.pierna.izq {
+  left: 160px;
+  transform: rotate(8deg);
+}
+
+.pierna.der {
+  right: 160px;
+  transform: rotate(-8deg);
+}
+
+.pie {
+  position: absolute;
+  bottom: -4px;
+  width: 45px;
+  height: 15px;
+  border-bottom: 4px solid #000000;
+  border-left: 4px solid #000000;
+  border-radius: 5px 0 0 0;
+}
+
+.pierna.izq .pie {
+  right: 0;
+  transform: rotate(-5deg);
+}
+
+.pierna.der .pie {
+  left: 0px;
+  transform: scaleX(-1) rotate(0deg);
+}
